@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>Report Card Maker</title>
   <style>
+    body {
+  padding: 40px;
+}
     #reportCard {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -15,22 +18,22 @@
   </style>
 </head>
 <body>
-  <h1>Report Card Maker</h1>
+  <h1>Report Maker</h1>
   <form>
     <div class="form-group">
-        <label>Student Name: <input type="text" id="studentName" class="form-control"></label>
+        <label>Student's Name: <input type="text" id="studentName" class="form-control"></label>
     </div>
     <div class="form-group">
-        <label>Math Grade: <input type="number" id="mathGrade" class="form-control"></label>
+        <label>Maths Marks: <input type="number" id="mathGrade" class="form-control"></label>
     </div>
     <div class="form-group">
-        <label>Science Grade: <input type="number" id="scienceGrade" class="form-control"></label>
+        <label>Science Marks: <input type="number" id="scienceGrade" class="form-control"></label>
     </div>
     <div class="form-group">
-        <label>English Grade: <input type="number" id="englishGrade" class="form-control"></label>
+        <label>English Marks: <input type="number" id="englishGrade" class="form-control"></label>
     </div>
     <div class="form-group">
-        <label>Social Studies Grade: <input type="number" id="socialStudiesGrade" class="form-control"></label>
+        <label>S.S.T Marks: <input type="number" id="socialStudiesGrade" class="form-control"></label>
     </div>
     <button id="generateReportCard" class="btn btn-primary">Generate Report Card</button>
 </form>
@@ -63,7 +66,7 @@
   
   // Write the report card content to the new window's document
   printWindow.document.write(reportCard);
-  printWindow.document.write("<button onclick='window.print()'>Print</button>")
+  printWindow.document.write("<button onclick='window.print()'>Download Report Card</button>")
 });
 
 
