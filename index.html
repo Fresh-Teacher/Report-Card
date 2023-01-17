@@ -4,6 +4,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>Report Card Maker</title>
   <style>
+     /* Default styles for all screen sizes */
+  /* ... */
+
+  /* Styles for screens smaller than 768px (e.g. mobile devices) */
+  @media (max-width: 768px) {
+  /* Adjust font size for text elements */
+  #reportCard h2,
+  #reportCard p {
+    font-size: 14px;
+  }
+}
+
+
+  /* Styles for screens larger than 768px (e.g. desktop) */
+  @media (min-width: 768px) {
+  /* Adjust font size for text elements */
+  #reportCard h2,
+  #reportCard p {
+    font-size: 18px;
+  }
+}
+
+
     #reportCard {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -41,6 +64,22 @@
   var englishGrade = document.getElementById("englishGrade").value;
   var socialStudiesGrade = document.getElementById("socialStudiesGrade").value;
   
+
+  // screen size
+  function checkScreenSize() {
+    if (window.innerWidth < 768) {
+      // Code to adjust layout for mobile devices
+    } else {
+      // Code to adjust layout for larger screens
+    }
+  }
+
+  // Call the function when the page loads
+  window.onload = checkScreenSize;
+
+  // Call the function when the screen size changes
+  window.onresize = checkScreenSize;
+
   // Add a variable to keep track of the total
   var totalGrade = 0;
   
