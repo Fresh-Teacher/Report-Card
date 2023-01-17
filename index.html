@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>Report Card Maker</title>
   <style>
     #reportCard {
@@ -14,14 +15,24 @@
 <body>
   <h1>Report Card Maker</h1>
   <form>
-    <label>Student Name: <input type="text" id="studentName"></label><br>
-    <label>Math Grade: <input type="number" id="mathGrade"></label><br>
-    <label>Science Grade: <input type="number" id="scienceGrade"></label><br>
-    <label>English Grade: <input type="number" id="englishGrade"></label><br>
-    <label>Social Studies Grade: <input type="number" id="socialStudiesGrade"></label><br>
-    <button id="generateReportCard">Generate Report Card</button>
-  </form>
-  <div id="reportCard"></div>
+    <div class="form-group">
+        <label>Student Name: <input type="text" id="studentName" class="form-control"></label>
+    </div>
+    <div class="form-group">
+        <label>Math Grade: <input type="number" id="mathGrade" class="form-control"></label>
+    </div>
+    <div class="form-group">
+        <label>Science Grade: <input type="number" id="scienceGrade" class="form-control"></label>
+    </div>
+    <div class="form-group">
+        <label>English Grade: <input type="number" id="englishGrade" class="form-control"></label>
+    </div>
+    <div class="form-group">
+        <label>Social Studies Grade: <input type="number" id="socialStudiesGrade" class="form-control"></label>
+    </div>
+    <button id="generateReportCard" class="btn btn-primary">Generate Report Card</button>
+</form>
+
   <script>
    document.getElementById("generateReportCard").addEventListener("click", function(){
   var studentName = document.getElementById("studentName").value;
