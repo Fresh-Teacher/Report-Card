@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report Card Maker</title>
+  <style>
+    #reportCard {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Report Card Maker</h1>
+  <form>
+    <label>Student Name: <input type="text" id="studentName"></label><br>
+    <label>Math Grade: <input type="number" id="mathGrade"></label><br>
+    <label>Science Grade: <input type="number" id="scienceGrade"></label><br>
+    <label>English Grade: <input type="number" id="englishGrade"></label><br>
+    <label>Social Studies Grade: <input type="number" id="socialStudiesGrade"></label><br>
+    <button id="generateReportCard">Generate Report Card</button>
+  </form>
+  <div id="reportCard"></div>
+  <script>
+   document.getElementById("generateReportCard").addEventListener("click", function(){
+  var studentName = document.getElementById("studentName").value;
+  var mathGrade = document.getElementById("mathGrade").value;
+  var scienceGrade = document.getElementById("scienceGrade").value;
+  var englishGrade = document.getElementById("englishGrade").value;
+  var socialStudiesGrade = document.getElementById("socialStudiesGrade").value;
+  
+  // Add a variable to keep track of the total
+  var totalGrade = 0;
+  
+  // Add each grade to the total
+  totalGrade += parseFloat(mathGrade);
+  totalGrade += parseFloat(scienceGrade);
+  totalGrade += parseFloat(englishGrade);
+  totalGrade += parseFloat(socialStudiesGrade);
+  
+  var reportCard = "<h2>Report Card for " + studentName + "</h2>" +
+                  "<p>Math: " + mathGrade + "</p>" +
+                  "<p>Science: " + scienceGrade + "</p>" +
+                  "<p>English: " + englishGrade + "</p>" +
+                  "<p>Social Studies: " + socialStudiesGrade + "</p>" +
+                  "<p>Total Marks: " + totalGrade + "</p>";
+  // Open a new window
+  var printWindow = window.open("", "", "height=500, width=500");
+  
+  // Write the report card content to the new window's document
+  printWindow.document.write(reportCard);
+  printWindow.document.write("<button onclick='window.print()'>Print</button>")
+});
+
+
+  </script>
+</body>
+</html>
